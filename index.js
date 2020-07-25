@@ -1,6 +1,6 @@
 
 async function getData() {
-	const res = await fetch("https://www.dmi.dk/fileadmin/user_upload/Bruger_upload/Tidevand/2020/Juelsminde.tmp.txt")
+	const res = await fetch("/vandstand/data")
 	let data = (await res.text()).split("\n");
 	data.splice(0, 15)
 	data.pop();
