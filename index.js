@@ -1,6 +1,8 @@
 
 async function getData() {
-	const res = await fetch("/vandstand/data")
+	// http://ocean.dmi.dk/tides/tides_dk.php
+	// const res = await fetch("http://ocean.dmi.dk/tides/2021/Juelsminde.tmp.txt")
+	const res = await fetch("/vandstand.txt")
 	let data = (await res.text()).split("\n");
 	data.splice(0, 15)
 	data.pop();
